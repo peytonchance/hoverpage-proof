@@ -1,20 +1,27 @@
+body{
+  /* background-color: black; */
+}
+.header{
+  min-height: 500px;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
     position: fixed;
-    bottom: 0;
+    top: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+    text-align: center;
 }
 
 /* Style the button used to pause/play the video */
@@ -31,4 +38,54 @@
 #myBtn:hover {
     background: #ddd;
     color: black;
+}
+
+
+/*** Trying styles for full-screen vimeo -- styles from https://codepen.io/vkjgr/pen/myLoGX ***/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html, body {
+  height: 100%;
+}
+div {
+  display: block;
+  position: relative;
+}
+
+.fullscreen {
+  height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+.video {
+  display: block;
+	left: 0px;
+	overflow: hidden;
+	padding-bottom: 56.25%; /* 56.25% = 16:9. set ratio */
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.video .wrapper {
+  display: block;
+	height: 100%;
+	left: 0px;
+	overflow: visible;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.video iframe {
+  display: block;
+	height: 100%;
+	width: 100%;
 }

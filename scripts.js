@@ -10,6 +10,7 @@ video.play();
 var btn = document.getElementById("myBtn");
 
 // Switch video background to match hovered button
+
 function switchVideo(newUrl){
   source.setAttribute('src', newUrl);
   video.load();
@@ -21,3 +22,22 @@ function resetVideo(){
   video.load();
   video.play();
 }
+
+
+// Trying scripts for full-screen Vimeo
+function videoSize() {
+  var $windowHeight = $(window).height();
+  var $videoHeight = $(".video").outerHeight();
+	var $scale = $windowHeight / $videoHeight;
+
+  if ($videoHeight <= $windowHeight) {
+    $(".video").css({
+      "-webkit-transform" : "scale("+$scale+") translateY(-50%)",
+			"transform" : "scale("+$scale+") translateY(-50%)"
+		});
+	};
+}
+
+$(window).on('load resize',function(){
+  videoSize();
+});
