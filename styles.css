@@ -1,5 +1,5 @@
 body{
-  /* background-color: black; */
+  background-color: black;
 }
 .header{
   min-height: 500px;
@@ -9,6 +9,7 @@ body{
 #myVideo {
     position: fixed;
     top: 0;
+    left: 0;
     min-width: 100vw;
     min-height: 100vh;
 }
@@ -17,6 +18,7 @@ body{
 .content {
     position: fixed;
     top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
@@ -38,54 +40,4 @@ body{
 #myBtn:hover {
     background: #ddd;
     color: black;
-}
-
-
-/*** Trying styles for full-screen vimeo -- styles from https://codepen.io/vkjgr/pen/myLoGX ***/
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-html, body {
-  height: 100%;
-}
-div {
-  display: block;
-  position: relative;
-}
-
-.fullscreen {
-  height: 100%;
-	overflow: hidden;
-	width: 100%;
-}
-.video {
-  display: block;
-	left: 0px;
-	overflow: hidden;
-	padding-bottom: 56.25%; /* 56.25% = 16:9. set ratio */
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	-webkit-transform-origin: 50% 0;
-	transform-origin: 50% 0;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.video .wrapper {
-  display: block;
-	height: 100%;
-	left: 0px;
-	overflow: visible;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.video iframe {
-  display: block;
-	height: 100%;
-	width: 100%;
 }
